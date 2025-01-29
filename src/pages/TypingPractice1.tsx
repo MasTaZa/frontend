@@ -5,15 +5,15 @@ const TypingPractice1 = () => {
     return (
         <div className="fullScreen">
             <div className="leftPanel">
-                <h2>낱말연습</h2>
-                <p>진행시간 : 00:00</p>
-                <h3>전체</h3>
+                <h3>낱말연습</h3>
+                <p>진행시간 : 00:00</p><br></br>
+                <h4>전체</h4>
                 <p>평균타수 : 100</p>
-                <p>정확도 : 100.00%</p>
-                <h3>현재</h3>
+                <p>정확도 : 100.00%</p><br></br>
+                <h4>현재</h4>
                 <p>최고타수 : 300</p>
                 <p>평균타수 : 200</p>
-                <p>정확도 : 40.00%</p>
+                <p>정확도 : 40.00%</p><br></br>
                 <img src="/img/mirim.png" alt="Mirim Logo"></img>
             </div>
             <div className="taza">
@@ -22,6 +22,9 @@ const TypingPractice1 = () => {
                     <p>public class Ms</p>
                 </div>
                 <div className="NextTaza">
+                    <p>pubic static void main{'{'}String args[]{'}'}{'{'}</p>
+                    <p>int a = 1; int b = 2; int c = 3;</p>
+                    <p>System.out.println(a + b + c);</p>
                 </div>
             </div>
         </div>

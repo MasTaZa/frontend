@@ -10,13 +10,22 @@ body {
 }
 
 .leftPanel {
-    width: 335px; 
+    width: 300px; 
     height: 85vh;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-left: 50px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.leftPanel img {
+    padding-top: 20px;
 }
 
 .taza {
     flex: 1; /* 남은 공간 모두 차지. */
     background-color: white;
+    border-radius: 15px;
 }
