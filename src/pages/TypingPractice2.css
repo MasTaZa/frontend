@@ -62,5 +62,16 @@ body {
 }
 
 .Keyboard {
-    
+    background-color: white;
+    height: 470px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 5px;
+    background-color: lightgray;
+    border-radius: 15px;
+    margin: 10px;
 }

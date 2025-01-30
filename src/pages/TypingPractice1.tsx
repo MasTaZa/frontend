@@ -29,7 +29,8 @@ const TypingPractice1 = () => {
                     <p>System.out.println(a + b + c);</p>
                 </div>
                 <div className="Keyboard">
-                    
+                    <br></br>
+                    <p className="progress"></p>
                 </div>
             </div>
         </div>
