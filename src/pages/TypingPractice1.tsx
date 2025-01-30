@@ -31,6 +31,75 @@ const TypingPractice1 = () => {
                 <div className="Keyboard">
                     <br></br>
                     <p className="progress"></p>
+                    <div className="keyboard-row">
+                        <p className="key">`</p>
+                        <p className="key">1</p>
+                        <p className="key">2</p>
+                        <p className="key">3</p>
+                        <p className="key">4</p>
+                        <p className="key">5</p>
+                        <p className="key">6</p>
+                        <p className="key">7</p>
+                        <p className="key">8</p>
+                        <p className="key">9</p>
+                        <p className="key">0</p>
+                        <p className="key">-</p>
+                        <p className="key">=</p>
+                        <p className="key">Backspace</p>
+                    </div>
+                    <div className="keyboard-row">
+                        <p className="key">Tab</p>
+                        <p className="key">Q</p>
+                        <p className="key">W</p>
+                        <p className="key">E</p>
+                        <p className="key">R</p>
+                        <p className="key">T</p>
+                        <p className="key">Y</p>
+                        <p className="key">U</p>
+                        <p className="key">I</p>
+                        <p className="key">O</p>
+                        <p className="key">P</p>
+                        <p className="key">[</p>
+                        <p className="key">]</p>
+                        <p className="key">\</p>
+                    </div>
+                    <div className="keyboard-row">
+                        <p className="key">CapsLock</p>
+                        <p className="key">A</p>
+                        <p className="key">S</p>
+                        <p className="key">D</p>
+                        <p className="key">F</p>
+                        <p className="key">G</p>
+                        <p className="key">H</p>
+                        <p className="key">J</p>
+                        <p className="key">K</p>
+                        <p className="key">L</p>
+                        <p className="key">;</p>
+                        <p className="key">‘</p>
+                        <p className="key">Enter</p>
+                    </div>
+                    <div className="keyboard-row">
+                        <p className="key">Shift</p>
+                        <p className="key">Z</p>
+                        <p className="key">X</p>
+                        <p className="key">C</p>
+                        <p className="key">V</p>
+                        <p className="key">B</p>
+                        <p className="key">N</p>
+                        <p className="key">M</p>
+                        <p className="key">,</p>
+                        <p className="key">.</p>
+                        <p className="key">/</p>
+                        <p className="key">Shift</p>
+                    </div>
+                    <div className="keyboard-row">
+                        <p className="key">Ctrl</p>
+                        <p className="key">Alt</p>
+                        <p className="key">Space</p>
+                        <p className="key">Ctrl</p>
+                        <p className="key">Alt</p>
+                        <p className="key">한자</p>
+                    </div>
                 </div>
             </div>
         </div>
