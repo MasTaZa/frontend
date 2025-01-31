@@ -5,7 +5,7 @@ const TypingPractice: React.FC = () => {
   return (
     <div className="container">
       <div className="main-box">
-        {/*왼쪽 패널*/}
+        {/*왼쪽*/}
         <div className="info-panel">
           <h2 className="title">낱말연습</h2>
           <p>진행시간 : 00:00</p>
@@ -21,7 +21,7 @@ const TypingPractice: React.FC = () => {
           </div>
         </div>
 
-        {/*오른쪽 화면*/}
+        {/*오른쪽*/}
         <div className="typing-area">
           <div className="code-box">
             <p className="code">public class Main{'{'}</p>

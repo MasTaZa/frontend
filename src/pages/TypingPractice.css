@@ -14,7 +14,7 @@
   padding: 20px;
 }
 
-/* 왼쪽 정보 패널 */
+/*왼쪽 패널*/
 .info-panel {
   width: 15%;
   background: white;
@@ -51,7 +51,7 @@
   height: 60px;
 }
 
-/* 오른쪽 타자 연습 화면 */
+/*오른쪽*/
 .typing-area {
   flex: 1;
   margin-left: 20px;
@@ -78,22 +78,4 @@
 
 .highlight {
   color: red;
-}
-
-/* 키보드 레이아웃 */
-.keyboard-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.key {
-  width: 20px;
-  height: 20px;
-  background: #166534;
-  border-radius: 4px;
 }
