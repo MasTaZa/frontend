@@ -17,7 +17,7 @@ const TypingPractice: React.FC = () => {
           <p>평균타수 : 200</p>
           <p>정확도 : 40.00%</p>
           <div className="logo-container">
-            <img src="school_logo.png" alt="School Logo" className="logo" />
+          <img src="/img/mirim.png" alt="Mirim Logo" className="logo" />
           </div>
         </div>
 
