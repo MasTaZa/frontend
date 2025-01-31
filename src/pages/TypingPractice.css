@@ -27,7 +27,7 @@ body {
 .VLine {
     background-color: white;
     width: 5px;
-    height: 875px;
+    height: 880px;
     margin-left: 30px;
     border-radius: 15px;
 }
@@ -63,7 +63,7 @@ body {
 
 .Keyboard {
     background-color: white;
-    height: 470px;
+    height: 450px;
     border-radius: 15px;
     padding: 20px;
     margin-top: 20px;
@@ -83,7 +83,7 @@ body {
 }
 
 .keyboard-row p {
-    width: 65px;
+    width: 70px;
     height: 72px;
     margin: 5px;
     display: block;
@@ -96,3 +96,33 @@ body {
 .ckey {
     background-color: #008156;
 }
+
+.backspace {
+    width: 120px;
+}
+
+.tab {
+    width: 90px;
+}
+
+.backslash {
+    width: 90px;
+}
+
+.capslock {
+    width: 100px;
+}
+
+.enter {
+    width: 120px;
+}
+
+.space {
+    width: 300px;
+}
+
+.hanja {
+    width: 90px;
+}
+
+
