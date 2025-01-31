@@ -1,0 +1,7 @@
+.fullScreen {
+    display: flex; /* 레이아웃을 쉽게 정렬할 수 있음. */
+    justify-content: center; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    height: 100vh; /* 브라우저 창의 100%를 차지할 수 있게 해줌. 100vh말고 100%를 사용하면 부모요소를 기준으로 하기때문에 vh가 적절함. */
+    background-color: #9EDF9C;
+}

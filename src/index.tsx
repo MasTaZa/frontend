@@ -6,4 +6,4 @@ import TypingPractice from './pages/TypingPractice'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(<div>
   <TypingPractice />
-  </div>)
+</div>)

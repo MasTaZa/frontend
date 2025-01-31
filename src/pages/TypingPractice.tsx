@@ -1,7 +1,7 @@
 import React from "react";
 import "./TypingPractice.css";
 
-const TypingPractice: React.FC = () => {
+const TypingPractice = () => {
   return (
     <div className="container">
       <div className="main-box">
