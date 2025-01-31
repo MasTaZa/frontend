@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #a7d7a8;
+  background-color: #9EDF9C;
 }
 
 .main-box {
@@ -32,7 +32,7 @@
 .title {
   font-size: 18px;
   font-weight: bold;
-  background: #e0f2e9;
+  background: #Bee7B0;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -52,6 +52,7 @@
 
 /*오른쪽*/
 .typing-area {
+  flex: 1;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
