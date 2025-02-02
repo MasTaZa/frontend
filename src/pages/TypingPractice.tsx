@@ -21,7 +21,7 @@ const TypingPractice = () => {
                 <div className="Ex">
                     <p>public class Main{'{'}</p> {/* "{" 를 쓰려면 이렇게 해야된다는 사실....... 귀한자식이구나 너 */}
                     <p className="HLine"></p>
-                    <input type="text" className="typingInput" placeholder="여기에 입력하세요" />
+                    <input type="text" className="typingInput" />
                 </div>
                 <div className="NextTaza">
                     <p>pubic static void main{'{'}String args[]{'}'}{'{'}</p>
