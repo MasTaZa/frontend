@@ -98,6 +98,43 @@ body {
     background-color: #008156;
 }
 
+.backspace-key {
+    width: 300px !important; /* 우선순위 설정 ( 위에 설정한 너비를 덮어씌우는 것 ) */
+}
+
+.tab-key {
+    width: 185px !important;
+}
+
+.b-key {
+    width: 185px !important;
+}
+
+.caps-key {
+    width: 225px !important;
+}
+
+.enter-key {
+    width: 225px !important;
+}
+
+.shift-key {
+    width: 265px !important;
+}
+
+.space-key {
+    width: 620px !important;
+    background-color: #008156;
+}
+
+.hanja-key {
+    width: 220px !important;
+}
+
+.keyboard-row:last-child .key {
+    width: 90px;
+}
+
 .typingInput {
     border: none;
     font-size: 18px;
@@ -105,3 +142,4 @@ body {
     height: 20px;
     margin-bottom: 15px;
 }
+

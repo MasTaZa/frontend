@@ -19,12 +19,12 @@ const TypingPractice = () => {
             <div className="VLine"></div>
             <div className="taza">
                 <div className="Ex">
-                    <p>public class Main{'{'}</p> {/* "{" 를 쓰려면 이렇게 해야된다는 사실....... 귀한자식이구나 너 */}
+                    <p>public class Main{'{'}</p>
                     <p className="HLine"></p>
                     <input type="text" className="typingInput" />
                 </div>
                 <div className="NextTaza">
-                    <p>pubic static void main{'{'}String args[]{'}'}{'{'}</p>
+                    <p>public static void main{'{'}String args[]{'}'}{'{'}</p>
                     <p>int a = 1; int b = 2; int c = 3;</p>
                     <p>System.out.println(a + b + c);</p>
                 </div>
@@ -44,10 +44,10 @@ const TypingPractice = () => {
                         <p className="ckey">0</p>
                         <p className="key">-</p>
                         <p className="key">=</p>
-                        <p className="key">Backspace</p>
+                        <p className="backspace-key">Backspace</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="key">Tab</p>
+                        <p className="tab-key">Tab</p>
                         <p className="ckey">Q</p>
                         <p className="ckey">W</p>
                         <p className="ckey">E</p>
@@ -60,10 +60,10 @@ const TypingPractice = () => {
                         <p className="ckey">P</p>
                         <p className="ckey">[</p>
                         <p className="ckey">]</p>
-                        <p className="key">\</p>
+                        <p className="b-key">\</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="key">CapsLock</p>
+                        <p className="caps-key">CapsLock</p>
                         <p className="ckey">A</p>
                         <p className="ckey">S</p>
                         <p className="ckey">D</p>
@@ -75,10 +75,10 @@ const TypingPractice = () => {
                         <p className="ckey">L</p>
                         <p className="ckey">;</p>
                         <p className="ckey">‘</p>
-                        <p className="key">Enter</p>
+                        <p className="enter-key">Enter</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="key">Shift</p>
+                        <p className="shift-key">Shift</p>
                         <p className="ckey">Z</p>
                         <p className="ckey">X</p>
                         <p className="ckey">C</p>
@@ -89,16 +89,16 @@ const TypingPractice = () => {
                         <p className="ckey">,</p>
                         <p className="ckey">.</p>
                         <p className="ckey">/</p>
-                        <p className="key">Shift</p>
+                        <p className="shift-key">Shift</p>
                     </div>
                     <div className="keyboard-row">
                         <p className="key">Ctrl</p>
                         <p className="key">Fn</p>
                         <p className="key">Window</p>
                         <p className="key">Alt</p>
-                        <p className="ckey">Space</p>
+                        <p className="space-key">Space</p>
                         <p className="key">한/영</p>
-                        <p className="key">한자</p>
+                        <p className="hanja-key">한자</p>
                     </div>
                 </div>
             </div>
