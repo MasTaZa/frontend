@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TypingPractice from './pages/TypingPractice'
+import Ranking2 from './pages/Ranking2'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(<div>
-  <TypingPractice />
+  <Ranking2 />
 </div>)
