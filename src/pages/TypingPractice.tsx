@@ -3,6 +3,7 @@ import "./TypingPractice.css";
 
 const TypingPractice = () => {
     const [elapsedTime, setElapsedTime] = useState(0);
+    const [typedValue, setTypedValue] = useState("");
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -16,6 +17,16 @@ const TypingPractice = () => {
         const minutes = String(Math.floor(time / 60)).padStart(2, "0");
         const seconds = String(time % 60).padStart(2, "0");
         return `${minutes}:${seconds}`;
+    };
+
+    // Handle input change and update the typed value
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTypedValue(event.target.value); // 입력값 추적
+    };
+
+    // Check if a key is active based on the typed value
+    const isKeyActive = (key: string) => {
+        return typedValue.includes(key); // 입력값에 해당 키가 포함되어 있는지 확인
     };
 
     return (
@@ -37,7 +48,12 @@ const TypingPractice = () => {
                 <div className="Ex">
                     <p>public class Main{'{'}</p>
                     <p className="HLine"></p>
-                    <input type="text" className="typingInput" />
+                    <input
+                        type="text"
+                        className="typingInput"
+                        value={typedValue}
+                        onChange={handleInputChange} // Handle input change
+                    />
                 </div>
                 <div className="NextTaza">
                     <p>public static void main{'{'}String args[]{'}'}{'{'}</p>
@@ -47,79 +63,79 @@ const TypingPractice = () => {
                 <div className="Keyboard">
                     <p className="progress"></p>
                     <div className="keyboard-row">
-                        <p className="key">`</p>
-                        <p className="ckey">1</p>
-                        <p className="ckey">2</p>
-                        <p className="ckey">3</p>
-                        <p className="ckey">4</p>
-                        <p className="ckey">5</p>
-                        <p className="ckey">6</p>
-                        <p className="ckey">7</p>
-                        <p className="ckey">8</p>
-                        <p className="ckey">9</p>
-                        <p className="ckey">0</p>
-                        <p className="key">-</p>
-                        <p className="key">=</p>
-                        <p className="backspace-key">Backspace</p>
+                        <p className={`key ${isKeyActive("`") ? "active" : ""}`}>`</p>
+                        <p className={`ckey ${isKeyActive("1") ? "active" : ""}`}>1</p>
+                        <p className={`ckey ${isKeyActive("2") ? "active" : ""}`}>2</p>
+                        <p className={`ckey ${isKeyActive("3") ? "active" : ""}`}>3</p>
+                        <p className={`ckey ${isKeyActive("4") ? "active" : ""}`}>4</p>
+                        <p className={`ckey ${isKeyActive("5") ? "active" : ""}`}>5</p>
+                        <p className={`ckey ${isKeyActive("6") ? "active" : ""}`}>6</p>
+                        <p className={`ckey ${isKeyActive("7") ? "active" : ""}`}>7</p>
+                        <p className={`ckey ${isKeyActive("8") ? "active" : ""}`}>8</p>
+                        <p className={`ckey ${isKeyActive("9") ? "active" : ""}`}>9</p>
+                        <p className={`ckey ${isKeyActive("0") ? "active" : ""}`}>0</p>
+                        <p className={`key ${isKeyActive("-") ? "active" : ""}`}>-</p>
+                        <p className={`key ${isKeyActive("=") ? "active" : ""}`}>=</p>
+                        <p className={`backspace-key ${isKeyActive("Backspace") ? "active" : ""}`}>Backspace</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="tab-key">Tab</p>
-                        <p className="ckey">Q</p>
-                        <p className="ckey">W</p>
-                        <p className="ckey">E</p>
-                        <p className="ckey">R</p>
-                        <p className="ckey">T</p>
-                        <p className="ckey">Y</p>
-                        <p className="ckey">U</p>
-                        <p className="ckey">I</p>
-                        <p className="ckey">O</p>
-                        <p className="ckey">P</p>
-                        <p className="ckey">[</p>
-                        <p className="ckey">]</p>
-                        <p className="b-key">\</p>
+                        <p className={`tab-key ${isKeyActive("Tab") ? "active" : ""}`}>Tab</p>
+                        <p className={`ckey ${isKeyActive("Q") ? "active" : ""}`}>Q</p>
+                        <p className={`ckey ${isKeyActive("W") ? "active" : ""}`}>W</p>
+                        <p className={`ckey ${isKeyActive("E") ? "active" : ""}`}>E</p>
+                        <p className={`ckey ${isKeyActive("R") ? "active" : ""}`}>R</p>
+                        <p className={`ckey ${isKeyActive("T") ? "active" : ""}`}>T</p>
+                        <p className={`ckey ${isKeyActive("Y") ? "active" : ""}`}>Y</p>
+                        <p className={`ckey ${isKeyActive("U") ? "active" : ""}`}>U</p>
+                        <p className={`ckey ${isKeyActive("I") ? "active" : ""}`}>I</p>
+                        <p className={`ckey ${isKeyActive("O") ? "active" : ""}`}>O</p>
+                        <p className={`ckey ${isKeyActive("P") ? "active" : ""}`}>P</p>
+                        <p className={`ckey ${isKeyActive("[") ? "active" : ""}`}>[</p>
+                        <p className={`ckey ${isKeyActive("]") ? "active" : ""}`}>]</p>
+                        <p className={`b-key ${isKeyActive("\\") ? "active" : ""}`}>\\</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="caps-key">CapsLock</p>
-                        <p className="ckey">A</p>
-                        <p className="ckey">S</p>
-                        <p className="ckey">D</p>
-                        <p className="ckey">F</p>
-                        <p className="ckey">G</p>
-                        <p className="ckey">H</p>
-                        <p className="ckey">J</p>
-                        <p className="ckey">K</p>
-                        <p className="ckey">L</p>
-                        <p className="ckey">;</p>
-                        <p className="ckey">‘</p>
-                        <p className="enter-key">Enter</p>
+                        <p className={`caps-key ${isKeyActive("CapsLock") ? "active" : ""}`}>CapsLock</p>
+                        <p className={`ckey ${isKeyActive("A") ? "active" : ""}`}>A</p>
+                        <p className={`ckey ${isKeyActive("S") ? "active" : ""}`}>S</p>
+                        <p className={`ckey ${isKeyActive("D") ? "active" : ""}`}>D</p>
+                        <p className={`ckey ${isKeyActive("F") ? "active" : ""}`}>F</p>
+                        <p className={`ckey ${isKeyActive("G") ? "active" : ""}`}>G</p>
+                        <p className={`ckey ${isKeyActive("H") ? "active" : ""}`}>H</p>
+                        <p className={`ckey ${isKeyActive("J") ? "active" : ""}`}>J</p>
+                        <p className={`ckey ${isKeyActive("K") ? "active" : ""}`}>K</p>
+                        <p className={`ckey ${isKeyActive("L") ? "active" : ""}`}>L</p>
+                        <p className={`ckey ${isKeyActive(";") ? "active" : ""}`}>;</p>
+                        <p className={`ckey ${isKeyActive("‘") ? "active" : ""}`}>‘</p>
+                        <p className={`enter-key ${isKeyActive("Enter") ? "active" : ""}`}>Enter</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="shift-key">Shift</p>
-                        <p className="ckey">Z</p>
-                        <p className="ckey">X</p>
-                        <p className="ckey">C</p>
-                        <p className="ckey">V</p>
-                        <p className="ckey">B</p>
-                        <p className="ckey">N</p>
-                        <p className="ckey">M</p>
-                        <p className="ckey">,</p>
-                        <p className="ckey">.</p>
-                        <p className="ckey">/</p>
-                        <p className="shift-key">Shift</p>
+                        <p className={`shift-key ${isKeyActive("Shift") ? "active" : ""}`}>Shift</p>
+                        <p className={`ckey ${isKeyActive("Z") ? "active" : ""}`}>Z</p>
+                        <p className={`ckey ${isKeyActive("X") ? "active" : ""}`}>X</p>
+                        <p className={`ckey ${isKeyActive("C") ? "active" : ""}`}>C</p>
+                        <p className={`ckey ${isKeyActive("V") ? "active" : ""}`}>V</p>
+                        <p className={`ckey ${isKeyActive("B") ? "active" : ""}`}>B</p>
+                        <p className={`ckey ${isKeyActive("N") ? "active" : ""}`}>N</p>
+                        <p className={`ckey ${isKeyActive("M") ? "active" : ""}`}>M</p>
+                        <p className={`ckey ${isKeyActive(",") ? "active" : ""}`}>,</p>
+                        <p className={`ckey ${isKeyActive(".") ? "active" : ""}`}>.</p>
+                        <p className={`ckey ${isKeyActive("/") ? "active" : ""}`}>/</p>
+                        <p className={`shift-key ${isKeyActive("Shift") ? "active" : ""}`}>Shift</p>
                     </div>
                     <div className="keyboard-row">
-                        <p className="key">Ctrl</p>
-                        <p className="key">Fn</p>
-                        <p className="key">Window</p>
-                        <p className="key">Alt</p>
-                        <p className="space-key">Space</p>
-                        <p className="key">한/영</p>
-                        <p className="hanja-key">한자</p>
+                        <p className={`key ${isKeyActive("Ctrl") ? "active" : ""}`}>Ctrl</p>
+                        <p className={`key ${isKeyActive("Fn") ? "active" : ""}`}>Fn</p>
+                        <p className={`key ${isKeyActive("Window") ? "active" : ""}`}>Window</p>
+                        <p className={`key ${isKeyActive("Alt") ? "active" : ""}`}>Alt</p>
+                        <p className={`space-key ${isKeyActive("Space") ? "active" : ""}`}>Space</p>
+                        <p className={`key ${isKeyActive("한/영") ? "active" : ""}`}>한/영</p>
+                        <p className={`hanja-key ${isKeyActive("한자") ? "active" : ""}`}>한자</p>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default TypingPractice;

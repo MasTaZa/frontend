@@ -145,3 +145,7 @@ body {
     margin-bottom: 15px;
 }
 
+.active {
+    background-color: #006B3F; /* 강조된 색상 */
+    color: white;
+}
