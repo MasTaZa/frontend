@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TypingPractice.css";
 
 const TypingPractice = () => {
+    const [elapsedTime, setElapsedTime] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setElapsedTime(prevTime => prevTime + 1);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const formatTime = (time = 0) => { 
+        const minutes = String(Math.floor(time / 60)).padStart(2, "0");
+        const seconds = String(time % 60).padStart(2, "0");
+        return `${minutes}:${seconds}`;
+    };
+
     return (
         <div className="fullScreen">
             <div className="leftPanel">
                 <h3>낱말연습</h3>
-                <p>진행시간 : 00:00</p><br></br>
+                <p>진행시간 : {formatTime(elapsedTime)}</p><br></br>
                 <h4>전체</h4>
                 <p>평균타수 : 100</p>
                 <p>정확도 : 100.00%</p><br></br>
