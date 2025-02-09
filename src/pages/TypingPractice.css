@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a7d7a8;
+}
+
+.main-box {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* 왼쪽 정보 패널 */
+.info-panel {
+  width: 15%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-panel p {
+  text-align: center;
+}
+
+.info-panel h3 {
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  background: #e0f2e9;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+/* 오른쪽 타자 연습 화면 */
+.typing-area {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-box {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+.error {
+  color: gray;
+}
+
+.highlight {
+  color: red;
+}
+
+/* 키보드 레이아웃 */
+.keyboard-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.key {
+  width: 20px;
+  height: 20px;
+  background: #166534;
+  border-radius: 4px;
+}
