@@ -1,0 +1,35 @@
+body {
+    background-color: #9EDF9C;
+    margin: 0px;
+}
+
+.fullScreen {
+    height: 95vh; /* 브라우저 창의 100%를 차지할 수 있게 해줌. 100vh말고 100%를 사용하면 부모요소를 기준으로 하기때문에 vh가 적절함. */
+}
+
+.top-panel {
+    background-color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.top-panel > .mirim-png {
+    margin-left: 80px;
+    width: 130px;
+    height: 130px;
+}
+
+.top-panel p {
+    margin-left: 60px;
+    color: #000;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.top-panel > .human-png {
+    margin-left: 1390px;
+    width: 40px;
+    height: 48px;
+    margin-right: 80px;
+}
