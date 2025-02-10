@@ -101,7 +101,7 @@ body {
 }
 
 .backspace-key {
-    width: 300px !important; /* 우선순위 설정 ( 위에 설정한 너비를 덮어씌우는 것 ) */
+    width: 300px !important;
 }
 
 .tab-key {
@@ -143,9 +143,4 @@ body {
     width: 800px;
     height: 20px;
     margin-bottom: 15px;
-}
-
-.active {
-    background-color: #006B3F; /* 강조된 색상 */
-    color: white;
 }
