@@ -24,35 +24,33 @@ const Ranking2 = () => {
                 <img src="/img/human.png" className="human-png" alt="human" />
             </div>
             <div className="bottom">
-                <p className="change">단어 연습</p>
-                <p>실시간 랭킹</p>
+                <p className="change">단어 연습<img src="img/arrow.png" /></p>
+                <p className="p">실시간 랭킹</p>
             </div>
             <div className="ranking-container">
                 <div className="ranking-row">
                     {items.slice(0, 5).map((item) => (
                         <div className="ranking-item" key={item.ranking}>
-                            <p className="ranking">{item.ranking}등</p>
+                            <p className="ranking">{item.ranking}</p>
                             <img
-                                src={item.profilePic}  // profilePic을 사용하여 이미지 경로 지정
+                                src={item.profilePic}
                                 alt="profile"
                                 className="profile-pic"
                             />
-                            <p className="name">{item.name}</p>
-                            <p className="tasu">타수: {item.tasu}</p>
+                            <p className="tasu">평균타수<br />{item.tasu}</p>
                         </div>
                     ))}
                 </div>
                 <div className="ranking-row">
                     {items.slice(5, 10).map((item) => (
                         <div className="ranking-item" key={item.ranking}>
-                            <p className="ranking">{item.ranking}등</p>
+                            <p className="ranking">{item.ranking}</p>
                             <img
-                                src={item.profilePic}  // profilePic을 사용하여 이미지 경로 지정
+                                src={item.profilePic} 
                                 alt="profile"
                                 className="profile-pic"
                             />
-                            <p className="name">{item.name}</p>
-                            <p className="tasu">타수: {item.tasu}</p>
+                            <p className="tasu">평균타수<br />{item.tasu}</p>
                         </div>
                     ))}
                 </div>
