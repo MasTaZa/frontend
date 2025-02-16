@@ -5,6 +5,7 @@ body {
 
 .fullScreen {
     height: 95vh;
+    width: 100vw;
 }
 
 .top-panel {
@@ -35,6 +36,27 @@ body {
     width: 40px;
     height: 48px;
     margin-right: 80px;
+}
+
+.options-container {
+    background: #FFFFFF;
+    border-top: 2.5px solid #CCCCCC;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: Pretendard;
+}
+
+.option-item {
+    cursor: pointer;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.option-item:first-child {
+    margin-left: 170px;
 }
 
 .bottom {

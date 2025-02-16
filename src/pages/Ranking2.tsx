@@ -1,7 +1,6 @@
-import React from "react";
+import { useState } from "react";
 import "./Ranking2.css";
 
-// 주어진 이름과 타수로 업데이트된 items 배열
 const items = [
     { ranking: 1, studentId: "1101", name: "기태연", tasu: 0, profilePic: "/img/1101.png" },
     { ranking: 2, studentId: "1102", name: "김효일", tasu: 0, profilePic: "/img/1102.png" },
@@ -15,28 +14,37 @@ const items = [
     { ranking: 10, studentId: "1110", name: "이상희", tasu: 0, profilePic: "/img/1110.png" }
 ];
 
-const Ranking2 = () => {
+export default function Ranking2() {
+    const [showOptions, setShowOptions] = useState(false);
+
     return (
         <div className="fullScreen">
             <div className="top-panel">
                 <img src="/img/mirim.png" className="mirim-png" alt="Mirim Logo" />
-                <p>타자연습</p>
+                <p style={{ marginLeft: "40px", cursor: "pointer" }}
+                    onClick={() => setShowOptions(!showOptions)}>타자연습</p>
                 <img src="/img/human.png" className="human-png" alt="human" />
             </div>
+
+            {showOptions && (
+                <div className="options-container">
+                    <h3 className="option-item">단어</h3>
+                    <h3 className="option-item">짧은 글</h3>
+                    <h3 className="option-item">긴 글</h3>
+                </div>
+            )}
+            
             <div className="bottom">
-                <p className="change">단어 연습<img src="img/arrow.png" /></p>
+                <p className="change">단어 연습<img src="/img/arrow.png" alt="arrow" /></p>
                 <p className="p">실시간 랭킹</p>
             </div>
+
             <div className="ranking-container">
                 <div className="ranking-row">
                     {items.slice(0, 5).map((item) => (
                         <div className="ranking-item" key={item.ranking}>
                             <p className="ranking">{item.ranking}</p>
-                            <img
-                                src={item.profilePic}
-                                alt="profile"
-                                className="profile-pic"
-                            />
+                            <img src={item.profilePic} alt="profile" className="profile-pic" />
                             <p className="tasu">평균타수<br />{item.tasu}</p>
                         </div>
                     ))}
@@ -45,11 +53,7 @@ const Ranking2 = () => {
                     {items.slice(5, 10).map((item) => (
                         <div className="ranking-item" key={item.ranking}>
                             <p className="ranking">{item.ranking}</p>
-                            <img
-                                src={item.profilePic} 
-                                alt="profile"
-                                className="profile-pic"
-                            />
+                            <img src={item.profilePic} alt="profile" className="profile-pic" />
                             <p className="tasu">평균타수<br />{item.tasu}</p>
                         </div>
                     ))}
@@ -57,6 +61,4 @@ const Ranking2 = () => {
             </div>
         </div>
     );
-};
-
-export default Ranking2;
+}
