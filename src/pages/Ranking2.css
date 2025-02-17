@@ -4,7 +4,7 @@ body {
 }
 
 .fullScreen {
-    height: 95vh; /* 브라우저 창의 100%를 차지할 수 있게 해줌. 100vh말고 100%를 사용하면 부모요소를 기준으로 하기때문에 vh가 적절함. */
+    height: 95vh;
 }
 
 .top-panel {
@@ -32,4 +32,70 @@ body {
     width: 40px;
     height: 48px;
     margin-right: 80px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 178px;
+    margin-left: 410px;
+    margin-right: 434PX;
+}
+
+.change {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ranking-container {
+    display: grid;
+    grid-template-columns: repeat(2, 427px); 
+    align-items: center;
+    margin-top: 30px;
+    justify-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+.ranking-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+.ranking-item {
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    width: 427px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.ranking {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tasu {
+    font-size: 1rem;
+    font-weight: normal;
 }
