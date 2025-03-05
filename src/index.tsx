@@ -19,5 +19,4 @@ root.render(<div>
   {/* <TypingBox/> */}
   {/* <LoginPage/> */}
   {/* <RankingMainPage/> */}
-    </div>);
-
+  </div>);
